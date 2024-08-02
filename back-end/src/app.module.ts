@@ -4,6 +4,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { PokemonModule } from './pokemon/pokemon.module';
+import { BattleModule } from './battle/battle.module';
 import configuration from './configuration';
 
 @Module({
@@ -22,11 +24,14 @@ import configuration from './configuration';
         schema: configService.get<string>('database.schema'),
         entities: [`${__dirname}/**/**/*.entity{.ts,.js}`],
         migrations: [`${__dirname}/migrations/**/*{.ts,.js}`],
+        migrationsTableName: 'migrations',
         migrationsRun: false,
         logging: configService.get('database.logging') == 'true',
       }),
       inject: [ConfigService],
     }),
+    PokemonModule,
+    BattleModule,
   ],
   controllers: [AppController],
   providers: [AppService],
