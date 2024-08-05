@@ -1,4 +1,4 @@
-Repositorio conteniendo una aplicación de Node v18.17.0 que resuelve un challange propuesto por Phinx
+Repositorio conteniendo una aplicación de Node v18.17.0 que resuelve un challenge propuesto por Phinx
 
 Para levantar el backend desarrollador en NestJS es necesario instalar sqlite3 y crear una DB dentro de sqlite3
 
