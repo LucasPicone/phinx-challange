@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Pokemon } from "../api/pokemon";
-import { Card, CardActionArea, CardContent, CardMedia, LinearProgress, Stack, Typography } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia, Divider, LinearProgress, Stack, Typography } from "@mui/material";
 
 interface PokemonDetailedCardProps {
     pokemon: Pokemon
@@ -17,6 +17,7 @@ const PokemonDetailedCard: FC<PokemonDetailedCardProps> = ({ pokemon }) => {
                 <CardContent>
                     <Typography variant="h6">{pokemon.name}</Typography>
                 </CardContent>
+                <Divider />
                 <Stack spacing={2}>
                     <Typography>HP</Typography>
                     <LinearProgress variant="determinate" color="success" value={(pokemon.hp * 100) / 7}/>
