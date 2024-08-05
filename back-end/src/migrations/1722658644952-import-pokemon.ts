@@ -4,8 +4,8 @@ import { PokemonType } from '../pokemon/enum/pokemon-type.enum';
 import { Pokemon } from '../pokemon/entities/pokemon.entity';
 import { pokemon } from '../../data/pokemon.json';
 
-export class ImportPokemon1722619531656 implements MigrationInterface {
-  name = 'ImportPokemon1722619531656';
+export class ImportPokemon1722658644952 implements MigrationInterface {
+  name = 'ImportPokemon1722658644952';
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     try {
