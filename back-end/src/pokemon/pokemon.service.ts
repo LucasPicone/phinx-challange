@@ -3,6 +3,7 @@ import { Inject, Injectable, NotImplementedException } from '@nestjs/common';
 import { CreatePokemonDto } from './dto/create-pokemon.dto';
 import { UpdatePokemonDto } from './dto/update-pokemon.dto';
 import { PokemonRepository } from './repository/pokemon.repository';
+import { Pokemon } from './entities/pokemon.entity';
 
 @Injectable()
 export class PokemonService {
@@ -18,7 +19,7 @@ export class PokemonService {
     return this.repository.find();
   }
 
-  async findOne(id: string) {
+  async findOne(id: string): Promise<Pokemon> {
     return this.repository.findOne({ where: { id } });
   }
 

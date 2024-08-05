@@ -1,9 +1,11 @@
 import { Controller, Get, Post, Body, Param } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 
 import { BattleService } from './battle.service';
 import { CreateBattleDto } from './dto/create-battle.dto';
 
 @Controller('battle')
+@ApiTags('Battle')
 export class BattleController {
   constructor(private readonly battleService: BattleService) {}
 

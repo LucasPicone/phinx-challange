@@ -38,7 +38,7 @@ const axiosInstance = axios.create({
 
 const fetchPokemon = async () => {
     try {
-        const { data }: { data: Pokemon[]} = await axiosInstance('/pokemon');
+        const { data }: { data: Pokemon[] } = await axiosInstance('/pokemon');
         return data
     } catch (error) {
         console.error('Error on Backend:', error)
